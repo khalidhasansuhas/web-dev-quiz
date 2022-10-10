@@ -16,11 +16,16 @@ function App() {
       children: [
         {
           path:'/',
-          element:<Home></Home>
+          element:<Home></Home>,
+
         },
         {
           path:'/home',
-          element:<Home></Home>
+          element:<Home></Home>,
+          loader: async () => {
+           return  fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+
         },
         {
           path:'/statistic',
