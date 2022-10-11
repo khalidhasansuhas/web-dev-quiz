@@ -8,13 +8,13 @@ const Statistic = () => {
     console.log(topics);
     return (
 
-        <div className='h-screen'>
-        <h2 className='text-5xl font-semibold py-8  flex justify-center underline underline-offset-8'> Number of Quiz for each subject in Chart</h2>
-            <div className='flex justify-center my-10'>
-
-                <BarChart
-                    width={1000}
-                    height={300}
+        <div className=' h-screen'>
+            <h2 className='text-5xl font-semibold py-8 my-10  flex justify-center underline underline-offset-8'> Number of Quiz for each subject in Chart</h2>
+            <ResponsiveContainer width="90%" height="60%">
+            <BarChart
+                    // width={500}
+                    // height={300}
+                    // margin={'auto'}
                     data={topics}>
                     <Bar dataKey="total" fill="#8884d8" />
 
@@ -22,7 +22,7 @@ const Statistic = () => {
                     <YAxis />
                     <Tooltip />
                 </BarChart>
-            </div>
+            </ResponsiveContainer>
         </div>
     );
 };

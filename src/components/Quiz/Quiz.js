@@ -10,7 +10,7 @@ const Quiz = ({  quiz }) => {
         Swal.fire(`Correct Answer: ${correctAnswer}`)
     }
     return (
-        <div className='container  my-5 bg-slate-300 w-1/2 border-solid rounded border-2 border-purple-800 m-auto p-10 '>
+        <div className='container  my-5 bg-gradient-to-r from-indigo-500 w-1/2 border-solid rounded border-2 border-purple-800 m-auto p-10 '>
             <div className='w-full flex justify-end'>
                 <EyeIcon onClick={handleIconAnswer} className="h-6 w-6 hover:text-green-500 hover:cursor-pointer left-0 " />
             </div>
