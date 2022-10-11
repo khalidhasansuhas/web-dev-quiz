@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Topic = ({topic}) => {
-    const {name, logo , total} = topic;
+const Topic = ({ topic }) => {
+    const {id, name, logo, total } = topic;
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="grid  lg:grid-cols-1">
@@ -9,7 +10,7 @@ const Topic = ({topic}) => {
                     <div className="relative">
                         <img
                             className="object-cover w-full h-64 rounded-t lg:h-80 xl:h-96"
-                            src={logo} 
+                            src={logo}
                             alt=''
                         />
                         <div className="absolute inset-0 bg-gray-800 bg-opacity-25" />
@@ -19,12 +20,13 @@ const Topic = ({topic}) => {
                             {name}
                         </h5>
                         <p className="mb-5 text-gray-700">
-                           Total Quiz: {total}
+                            Total Quiz: {total}
                         </p>
-                         <button className='rounded w-full py-3 font-semibold text-white bg-orange-500'>Start Quiz</button>   
+                        <Link to={`/home/${id}`}><button className='rounded w-full py-3 font-semibold text-white bg-orange-500'>Start Quiz</button>
+                        </Link>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     );
