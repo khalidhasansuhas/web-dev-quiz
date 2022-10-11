@@ -13,7 +13,7 @@ const TopicDetails = () => {
             {
                 topic.map(quiz => <Quiz
                 key={quiz.id}
-                correctAnswer={quiz.correctAnswer}
+                // correctAnswer={quiz.correctAnswer}
                 quiz={quiz}
                 ></Quiz> )
             }
