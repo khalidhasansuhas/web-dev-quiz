@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { TopicContext } from '../../layouts/Main';
 import Topic from '../Topic/Topic';
 
 const Home = () => {
-    const loaderData =  useLoaderData()
+    const loaderData = useContext(TopicContext)
     const topics = loaderData.data
-    console.log(topics);
     return (
         <div>
             <h2>This is home</h2>
-            {
-                topics.map(topic=> <Topic
-                key={topic.id}
-                topic={topic}
-                ></Topic>)
-            }
+            <section className='container grid lg:grid-cols-4 mx-auto'>
+                {
+                    topics.map(topic => <Topic
+                        key={topic.id}
+                        topic={topic}
+                    ></Topic>)
+                }
+            </section>
         </div>
     );
 };
